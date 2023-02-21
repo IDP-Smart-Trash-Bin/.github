@@ -4,18 +4,31 @@ This is a project for the **Integrated Design Project** (`MCTE 3412`) (Mechatron
 
 ## Group members
 
-- Fareez
-- Khairul
-- Muadz
-- Aiman
+|                                 Name                                 |                   Us                    |
+| :------------------------------------------------------------------: | :-------------------------------------: |
+| <ul><li>Fareez</li><li>Khairul</li><li>Muadz</li><li>Aiman</li></ul> | ![us :)](https://imgur.com/C61yJAX.png) |
+
+## Project description
+
+This project is to design and build a smart trash bin that can be used in mahallah, kuliyyah or other places of attraction in IIUM. Some feature highlights of this product is:
+a) Auto opening lid when person is present
+b) Auto compress the trash to save space
+c) Notify the cleaner when the trash bin is full
+d) Monitor the trash level remotely (IoT)
+
+![smart trash bin](https://imgur.com/uHTBzdO.png)
 
 ## Repositories
 
-This organization host several repository for this project. All of the repository is **only visible** to group members only as they might contain sensitive information e.g. API keys.
+This organization host several repository for this project. All of the repository is **only visible** to group members only as they might contain sensitive information e.g. API keys. However, you can ask for the source code if you are interested.
 
 ### [flutter_idp_project](https://github.com/IDP-Smart-Trash-Bin/flutter_idp_project/)
 
-Frontend mobile application for the trash bin. Monitor the current trash level etc. The application is build using [**Flutter**](https://flutter.dev/). Installable to [Android](https://github.com/IDP-Smart-Trash-Bin/flutter_idp_project/releases) and accessible on the [Web](https://idp-smart-bin.web.app/).
+Frontend mobile application for the trash bin. Monitor the current trash level etc. The application is build using [**Flutter**](https://flutter.dev/). Installable to Android and accessible on the Web.
+
+APK file(s): https://github.com/IDP-Smart-Trash-Bin/flutter_idp_project/releases
+
+Web URL: https://idp-smart-bin.web.app/ (Hosted on Firebase Hosting)
 
 ![screenshots](https://imgur.com/Ms5H3sG.png)
 
@@ -25,9 +38,13 @@ Client-side Arduino program. Uses **Arduino Mega 2560**. Interfacing all the sen
 
 ![circuit diagram](https://imgur.com/R3vvOXt.png)
 
+![circuit head](https://imgur.com/sHNFEM7.png)
+
+_Sorry for the messy circuit :sweat_smile:_
+
 ### [esp-new](https://github.com/IDP-Smart-Trash-Bin/esp-new)
 
-Client-side ESP32 program. Using the WiFi capabilities of the chip, its purpose is to a) Update the trash value to the server, and b) Send notification through Telegram.
+Client-side ESP32 program. Using the **WiFi capabilities** of the chip, its purpose is to a) Update the trash value to the server, and b) Send notification through Telegram.
 
 Programmed in C++ using [PlatformIO IDE](https://platformio.org/).
 
@@ -37,14 +54,49 @@ Also, we've learned that some ESP32 may having trouble communicate via https. I'
 
 Server-side API server uses by the ESP32. To handle CRUD operation to the Firebase database and Telegram message formatting.
 
-Deployed on [Heroku](https://idp-smart-trash-bin-server.herokuapp.com/).
+Written in Node.js using [Express](https://expressjs.com/) framework.
 
-<!-- ### [bot]() -->
+Deployed on [Heroku](https://www.heroku.com/).
+
+Server URL: https://idp-smart-trash-bin-server.herokuapp.com/
+
+### [bot](https://github.com/IDP-Smart-Trash-Bin/bot)
+
+Telegram bot that is used to send notification to the user (subscribers). It is also used to respond commands from the users.
+
+Written in Python using [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot) version 13.x
+
+|                        Screenshot                         |                  Demo                  |
+| :-------------------------------------------------------: | :------------------------------------: |
+| ![telegram bot screenshot](https://imgur.com/pjFKcF9.png) | ![Demo](https://imgur.com/wmBlofn.gif) |
+
+Also deployed on [Heroku](https://www.heroku.com/).
+
+Bot URL: https://t.me/idptrashbin_bot
+
+## Design
+
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+  <div>
+    <img src="https://i.imgur.com/YjpC9Dy.png" alt="image1" style="max-width: 100%;">
+  </div>
+  <div>
+    <img src="https://i.imgur.com/JvZs3H8.png" alt="image2" style="max-width: 100%;">
+  </div>
+  <div>
+    <img src="https://i.imgur.com/Um7JKqQ.png" alt="image3" style="max-width: 100%;">
+  </div>
+  <div>
+    <img src="https://i.imgur.com/s5oigjq.png" alt="image4" style="max-width: 100%;">
+  </div>
+</div>
 
 
+## Conclusion
 
+This project about 90%-ish complete. All planned features are working as expected, eg the level sensor, LCD display, IoT integration etc.
 
+Some features that are not fully achieved are:
 
-
-
-
+- Auto opening lid - Some problems related to the servo. The system would reset itself if servo is triggered. We suspected it was the spontaneous current draw by the servo. So we've isolated the Servo power supply. However, the problem still persist.
+- Trash compressing mechanism - We've bought a linear actuator that [cannot fit](https://imgur.com/QXBxPLk.png) properly inside the body.
