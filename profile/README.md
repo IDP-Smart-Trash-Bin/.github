@@ -4,9 +4,9 @@ This is a project for the **Integrated Design Project** (`MCTE 3412`) (Mechatron
 
 ## Group members
 
-|                                 Name                                 |                   Us                    |
-| :------------------------------------------------------------------: | :-------------------------------------: |
-| <ul><li>Fareez</li><li>Khairul</li><li>Muadz</li><li>Aiman</li></ul> | ![us :)](https://imgur.com/C61yJAX.png) |
+|                                 Name                                 |                                 Us                                  |
+| :------------------------------------------------------------------: | :-----------------------------------------------------------------: |
+| <ul><li>Fareez</li><li>Khairul</li><li>Muadz</li><li>Aiman</li></ul> | <img src="https://i.imgur.com/C61yJAX.png" alt="us :)" width="60%"> |
 
 ## Project description
 
@@ -16,7 +16,8 @@ b) Auto compress the trash to save space
 c) Notify the cleaner when the trash bin is full
 d) Monitor the trash level remotely (IoT)
 
-![smart trash bin](https://imgur.com/uHTBzdO.png)
+<img src="https://i.imgur.com/uHTBzdO.png" alt="smart trash bin" width="80%">
+
 
 ## Repositories
 
@@ -38,7 +39,7 @@ Client-side Arduino program. Uses **Arduino Mega 2560**. Interfacing all the sen
 
 ![circuit diagram](https://imgur.com/R3vvOXt.png)
 
-![circuit head](https://imgur.com/sHNFEM7.png)
+<img src="https://i.imgur.com/sHNFEM7.png" alt="circuit head" width="70%">
 
 _Sorry for the messy circuit :sweat_smile:_
 
@@ -66,9 +67,14 @@ Telegram bot that is used to send notification to the user (subscribers). It is 
 
 Written in Python using [python-telegram-bot](https://github.com/python-telegram-bot/python-telegram-bot) version 13.x
 
-|                        Screenshot                         |                  Demo                  |
-| :-------------------------------------------------------: | :------------------------------------: |
-| ![telegram bot screenshot](https://imgur.com/pjFKcF9.png) | ![Demo](https://imgur.com/wmBlofn.gif) |
+<div style="display: flex;">
+  <div style="flex: 1; margin-right: 20px;">
+    <img src="https://i.imgur.com/pjFKcF9.png" alt="image1" style="max-width: 100%;">
+  </div>
+  <div style="flex: 1; margin-left: 20px;">
+    <img src="https://i.imgur.com/wmBlofn.gif" alt="image2" style="max-width: 100%;">
+  </div>
+</div>
 
 Also deployed on [Heroku](https://www.heroku.com/).
 
@@ -90,7 +96,6 @@ Bot URL: https://t.me/idptrashbin_bot
     <img src="https://i.imgur.com/s5oigjq.png" alt="image4" style="max-width: 100%;">
   </div>
 </div>
-
 
 ## Conclusion
 
